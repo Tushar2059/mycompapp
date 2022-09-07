@@ -1,0 +1,116 @@
+.questions{
+   
+    
+    margin-left: 2rem;
+    margin-right: 2rem;
+   
+}
+
+.lifeline-container{
+        display: flex;
+        justify-content: space-between;
+        font-size: larger;
+        
+}
+
+.lifeline-icon{
+    color: green;
+    cursor: pointer;
+}
+
+.lifeline-icon:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.lifeline{
+    position: relative;
+    top: -4px;
+}
+
+.questionTitle{
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.quizTitle{
+    text-align: center;
+}
+
+.options-container{
+    display: inline-block;
+    width: 50%;
+   text-align: center;
+    
+}
+
+.option {
+    background-color: rgba(75, 75, 177, 0.808);
+    /*border-radius: 15%;*/
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    margin: 1rem auto;
+    padding: 1rem;
+    transition: 0.3s linear all;
+    text-align: center;
+    width: 90%;
+}
+
+.option:hover{
+    background-color: blue;
+}
+
+.button-container{
+    display: flex;
+    /*justify-content: flex-start;*/
+    justify-content: center;
+    /*text-align: center;*/
+    /* margin: 0 auto 1.0rem auto; */
+    padding: 1rem;
+    /* width: 80%; */
+}
+
+.button-container button {
+    border: none;
+    color: white;
+    cursor: pointer;
+    align-content: center;
+    width: 100px;
+    border-radius: 25px;
+    margin-right: 2rem;
+    padding: 1rem 0.5rem;
+}
+
+.button-container button:first-child {
+    background-color: blue;
+    box-shadow: gray;
+    transition: 0.2s linear all;
+}
+
+.button-container button:first-child:hover {
+    background-color: rgb(16, 16, 71);
+}
+
+.button-container button:nth-child(2) {
+    background-color: green;
+    box-shadow: gray;
+    transition: 0.2s linear all;
+}
+
+.button-container button:nth-child(2):hover {
+    background-color: rgb(14, 54, 14);
+}
+
+.button-container button:last-child {
+    background-color: yellowgreen;
+    box-shadow: gray;
+    transition: 0.2s linear all;
+}
+
+.button-container button:last-child:hover {
+    background-color: rgb(35, 48, 11);
+}
+

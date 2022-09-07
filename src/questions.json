@@ -1,0 +1,74 @@
+[
+    {
+        "question": "How will you find the value of 101<sup>2</sup> by using identity (a+b)<sup>2</sup>: _____?",
+        "optionA": "0 cm<sup>2</sup>",
+        "optionB": "51 cm<sup>2</sup>",
+        "optionC": "50 cm<sup>2</sup>",
+        "optionD": "49 cm<sup>2</sup>",
+        "answer": "D. 49 cm<sup>2</sup>",
+        "explanation" : "if the a=0 then (a+b)<sup>2</sup>= b<sup>2</sup>",
+        "noOfAttempts": 2,
+        "questionType": "selectOptions"
+    },
+    {
+        "question": "<p>If a=6 cm and b=7 cm then (a+b)<sup>2</sup> = ?</p>",
+        "optionA": "169 cm<sup>2</sup>",
+        "optionB": "170 cm<sup>2</sup>",
+        "optionC": "168 cm<sup>2</sup>",
+        "optionD": "171 cm<sup>2</sup>",
+        "answer": "A. 169 cm<sup>2</sup>",
+        "explanation" : "after calculation of (a+b)<sup>2</sup> =a<sup>2</sup>+2ab+b<sup>2</sup> the answer is 169 cm<sup>2</sup>",
+        "noOfAttempts": 2,
+        "questionType": "selectOptions"
+    },
+    {
+        "question": "If a=5 cm and b=0 cm then (a+b)<sup>2</sup> = ?",
+        "optionA": "30 cm<sup>2</sup>",
+        "optionB": "25 cm<sup>2</sup>",
+        "optionC": "0 cm<sup>2</sup>",
+        "optionD": "5 cm<sup>2</sup>",
+        "answer": "B. 25 cm<sup>2</sup>",
+        "explanation" : "if the b=0 then (a+b)<sup>2</sup>= a<sup>2</sup>",
+        "noOfAttempts": 2,
+        "questionType": "selectOptions"
+    },
+    {
+        "question": "If a=0 cm and b=7 cm then (a+b)<sup>2</sup> = ?",
+        "optionA": "0 cm<sup>2</sup>",
+        "optionB": "51 cm<sup>2</sup>",
+        "optionC": "50 cm<sup>2</sup>",
+        "optionD": "49 cm<sup>2</sup>",
+        "answer": "D. 49 cm<sup>2</sup>",
+        "explanation" : "if the a=0 then (a+b)<sup>2</sup>= b<sup>2</sup>",
+        "noOfAttempts": 2,
+        "questionType": "selectOptions"
+    },
+
+    {
+      "question": "How will you find the value of 101<sup>2</sup> by using identity (a+b)<sup>2</sup>: _____?",
+      "optionA": "(100+1)<sup>2</sup>",
+      "optionB": "100<sup>2</sup> + 12",
+      "optionC": "(100-1)<sup>2</sup>",
+      "optionD": "none of these",
+      
+      "answer": "A. (100+1)<sup>2</sup>",
+     
+      "explanation": "By spliting the number in two parts and applying algebraic identity (a+b)<sup>2</sup>",
+      "noOfAttempts": 2,
+      "questionType": "selectOptions"
+    },
+    {
+        "question": "A _____ is a regular quadrilateral, which means that it has four equal sides and four equal angles of 90 degrees each. ?",
+        "optionA": "Rectangle",
+        "optionB": "Circle",
+        "optionC": "Square",
+        "optionD": "None of these",
+    
+        "answer": "C. Square",
+   
+        "explanation": "A square is a regular quadrilateral, which means that it has four equal sides and four equal angles of 90 degrees each.",
+        "noOfAttempts": 2,
+        "questionType": "selectOptions"
+      }
+
+]
