@@ -4,9 +4,12 @@ import earth from "../Img/earth.png";
 import moon from "../Img/moon2d.jpg"
 import  stars2  from "../Img/stars3.jpg";
 import  stars1  from "../Img/stars1.jpg";
+import  arrow  from "../Img/rightarrow.jpg";
 import { toast } from "react-toastify";
 import * as Instru from "./MajorComponents/Instruction"
 import { Button } from "@mui/material";
+import { fontFamily, fontSize } from "@mui/system";
+import { fontGrid } from "@mui/material/styles/cssUtils";
 
 
 const MainSpringNeap1 = ({instruction,changeNextFlag}) => {
@@ -105,6 +108,11 @@ const MainSpringNeap1 = ({instruction,changeNextFlag}) => {
 //     }
 //   };
 
+
+let [msg, setMsg] = useState("Sun and earth ");
+let [harrowfull, setHarrowfull] = useState(false);
+
+
 let [hint, setHint] = useState(stars2);
 
 // let [flag1, setFlag1] = useState(false);
@@ -119,9 +127,6 @@ let [path4, setPath4] = useState(hint);
 
 let [count, setCount] = useState(1);
 
-function allowDrop(ev) {
-  ev.preventDefault();
-}
 
 
 
@@ -198,12 +203,6 @@ function drop(ev,id) {
  
 }
 
-function drag1(ev) {
- 
-  ev.dataTransfer.setData("id", ev.target.id);
-  ev.dataTransfer.setData("src", ev.target.src);
-  
-}
 
 
 
@@ -254,13 +253,30 @@ function drag4(ev) {
   
 }
 
+
+function drag1(ev) {
+ 
+ ev.dataTransfer.setData("id", ev.target.id);
+ ev.dataTransfer.setData("src", ev.target.src);
+ 
+}
+
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+
+
+
 function dropFull(ev,id) {
+  
   var data = ev.dataTransfer.getData("id");
   var src1 = ev.dataTransfer.getData("src");
   //document.getElementById(data).style.display="none"
   console.log("Count in drop Full 1 = "+count);
-  if(id==1 && count==1 && ev.target.id!=data)
+  if(id==1 && count==1 && ev.target.src!=src1)
   {
+    //alert("in if drop full");
    // alert()
     document.getElementById(data).style.display="none"
    // document.getElementById(data).src="../Img/stars3.jpg";
@@ -271,6 +287,8 @@ function dropFull(ev,id) {
     console.log("Count in drop Full 2 ="+count);
     instruction(Instru.Instruction_3());
     changeNextFlag(2);
+    setMsg("Spring tides formed due to gravitional pull of moon an sun");
+    setHarrowfull(true);
   }
   else 
   //alert("please place moon at correct position");
@@ -301,6 +319,8 @@ function dropLast(ev,id)
     console.log("Count in drop Last 2 ="+count);
     instruction(Instru.Instruction_4());
     changeNextFlag(3);
+    setMsg("Neap tides formed due to gravitional pull of moon an sun");
+    setHarrowfull(false);
   }
   else 
   {
@@ -329,6 +349,8 @@ function dropNew(ev,id)
     console.log("Count in drop Last 2 ="+count);
     instruction(Instru.Instruction_5());
     changeNextFlag(4);
+    setMsg("Spring tides formed due to gravitional pull of moon an sun");
+
   }
   else 
   {
@@ -354,11 +376,13 @@ function dropFirst(ev,id)
     setPath4(src4);
     console.log("in last "+ src4);
    // count=count+1;
-    count=0;
+    count=count+1;
     setCount(count);
     console.log("Count in drop Last 2 ="+count);
     instruction(Instru.Instruction_6());
     changeNextFlag(5);
+    setMsg("Neap tides formed due to gravitional pull of moon an sun");
+
   }
  
   else 
@@ -401,8 +425,8 @@ function dropFirst(ev,id)
           <div className="bg-succes " style={{ height: "33%",width:"100%" }} 
           >
               {/* new */}
-              <img  
-              className=""
+             <img  
+               className="img-fluid"
           id="drag4"
           src={path3}
           style={{
@@ -434,6 +458,7 @@ function dropFirst(ev,id)
           >
           {/* lastq */}
            <img  
+            className="img-fluid"
           id="drag3"
           src={path2}
           style={{
@@ -482,6 +507,7 @@ function dropFirst(ev,id)
           >
           {/* firstq */}
            <img  
+            className="img-fluid"
           id="drag4"
           src={path4}
           style={{
@@ -532,8 +558,23 @@ function dropFirst(ev,id)
           
           >
           {/* full */}
+
+          {/* {harrowfull     && (
+            <img  
+               className="img-fluid"
+               src={arrow}
+               style={{
+                maxHeight: "40%",
+                maxWidth: "15%",
+                marginTop: "20%",
+                //marginLeft: "60%",
+                
+              }}
+           />
+          )} */}
           
          <img  
+          className="img-fluid"
           id="drag2"
           src={path1}
           style={{
@@ -562,7 +603,8 @@ function dropFirst(ev,id)
         
       </div>
 
-      <h1>hello</h1>
+<p className="text-center" style={{ fontFamily:"arial" , fontSize:"1.2vw",fontWeight:"bold" }}>{msg}</p>
+      {/* <p style={{fontFamily="arial" fontSize="1.2vw"}}>{msg}</p> */}
       {/* <Button onClick={()=>{
         hint = stars1; 
         setHint(stars1);

@@ -93,6 +93,7 @@ const Feedback1 = (props) => {
       {props.flag == 1 && (
         <div>
           <img
+             className="img-fluid"
             id="drag1"
             draggable="true"
             onDragStart={(ev) => {
